@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
-  title: Phase One
-  description: Phase One
+  title: FM Comment Api
+  description: YBC
   version: '1.0'
   x-logo:
     url: https://github.com/joolfe/logoBanner.png
@@ -44,6 +44,10 @@ paths:
                 comment:
                   type: string
                   example: Hello World
+                description:
+                  type: string
+                  description: nullable
+                  example: Your description here
       parameters:
         - name: Accept
           in: header
@@ -201,6 +205,10 @@ paths:
                 comment_id:
                   type: integer
                   example: '4'
+                description:
+                  type: string
+                  description: nullable
+                  example: Your description here
       parameters:
         - name: Accept
           in: header

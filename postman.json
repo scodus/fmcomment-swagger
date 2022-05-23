@@ -3,7 +3,7 @@
 		"_postman_id": "a51a5e30-b2fe-4aaf-803b-ba1d6a3b2400",
 		"name": "fm-comment",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "16179347"
+		"_exporter_id": "19791325"
 	},
 	"item": [
 		{
@@ -41,6 +41,12 @@
 								{
 									"key": "comment",
 									"value": "Hello World",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Your description here",
+									"description": "nullable",
 									"type": "text"
 								}
 							]
@@ -292,6 +298,12 @@
 								{
 									"key": "comment_id",
 									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Your description here",
+									"description": "nullable",
 									"type": "text"
 								}
 							]
