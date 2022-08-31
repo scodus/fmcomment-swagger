@@ -25,7 +25,7 @@
 							"formdata": [
 								{
 									"key": "employee_id",
-									"value": "ldjawldj",
+									"value": "1",
 									"type": "text"
 								},
 								{
@@ -65,6 +65,39 @@
 					"response": []
 				},
 				{
+					"name": "get unread comment count",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employee_id\":3,\r\n    \"commentables\":[\r\n        {\r\n            \"commentable_type\": \"Post\",\r\n            \"commentable_id\": \"1\"\r\n        },\r\n        {\r\n            \"commentable_type\": \"Post\",\r\n            \"commentable_id\": \"2\"\r\n        },\r\n        {\r\n            \"commentable_type\": \"Blog\",\r\n            \"commentable_id\": \"1\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/unread-comment-count",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"unread-comment-count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "update",
 					"request": {
 						"method": "POST",
@@ -87,6 +120,11 @@
 									"key": "_method",
 									"value": "put",
 									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "This is a description",
+									"type": "text"
 								}
 							]
 						},
@@ -103,7 +141,7 @@
 							"variable": [
 								{
 									"key": "comment_id",
-									"value": "67038027-8905-4f2e-bde6-f4c258de11df"
+									"value": "370b9840-29a9-475b-84b8-554360856ce5"
 								}
 							]
 						}
@@ -138,7 +176,7 @@
 							"variable": [
 								{
 									"key": "comment_id",
-									"value": "3"
+									"value": "370b9840-29a9-475b-84b8-554360856ce5"
 								}
 							]
 						}
@@ -164,7 +202,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "{{url}}/api/comment/:commentable_type/:commentable_id/all",
+							"raw": "{{url}}/api/comment/:commentable_type/:commentable_id/all?employee_id=3",
 							"host": [
 								"{{url}}"
 							],
@@ -174,6 +212,12 @@
 								":commentable_type",
 								":commentable_id",
 								"all"
+							],
+							"query": [
+								{
+									"key": "employee_id",
+									"value": "3"
+								}
 							],
 							"variable": [
 								{
@@ -220,7 +264,7 @@
 							"variable": [
 								{
 									"key": "comment_id",
-									"value": "4"
+									"value": "370b9840-29a9-475b-84b8-554360856ce5"
 								}
 							]
 						}
@@ -259,7 +303,7 @@
 							"variable": [
 								{
 									"key": "comment_id",
-									"value": "4"
+									"value": "370b9840-29a9-475b-84b8-554360856ce5"
 								}
 							]
 						}
@@ -297,7 +341,7 @@
 								},
 								{
 									"key": "comment_id",
-									"value": "4",
+									"value": "dddc5777-cbee-4cd9-aea9-2a1e188c67d2",
 									"type": "text"
 								},
 								{
@@ -352,7 +396,7 @@
 							"variable": [
 								{
 									"key": "reply_id",
-									"value": "3"
+									"value": "08166dd4-8555-41c6-90d8-63d04ca0e57c"
 								}
 							]
 						}
@@ -398,7 +442,7 @@
 							"variable": [
 								{
 									"key": "reply_id",
-									"value": "5"
+									"value": "08166dd4-8555-41c6-90d8-63d04ca0e57c"
 								}
 							]
 						}
@@ -433,7 +477,7 @@
 							"variable": [
 								{
 									"key": "reply_id",
-									"value": "1"
+									"value": "08166dd4-8555-41c6-90d8-63d04ca0e57c"
 								}
 							]
 						}
@@ -472,7 +516,7 @@
 							"variable": [
 								{
 									"key": "reply_id",
-									"value": "4"
+									"value": "08166dd4-8555-41c6-90d8-63d04ca0e57c"
 								}
 							]
 						}
